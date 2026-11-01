@@ -1,4 +1,4 @@
-"""Poll Amazon's job search and record a counter and sighting times for each job ID."""
+﻿"""Poll Amazon's job search and record a counter and sighting times for each job ID."""
 
 from __future__ import annotations
 
@@ -454,8 +454,8 @@ def main() -> int:
         try:
             if not alert.start():
                 return 1
-            print("Testing job alarm for 2 seconds. It will stop and restore your previous volume automatically.", flush=True)
-            time.sleep(2)
+            print("Testing job alarm for 5 seconds. It will stop and restore your previous volume automatically.", flush=True)
+            time.sleep(5)
             return 0
         finally:
             alert.close()
@@ -558,3 +558,4 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except KeyboardInterrupt:
         logging.info("Stopped.")
+
