@@ -1,0 +1,24 @@
+__pycache__/
+.venv/
+*.pyc
+
+# Authentication and sessions
+headers.json
+request.curl
+*.cookie
+*.token
+.env
+.env.*
+
+# Personal settings and job history
+browser_settings.json
+settings.json
+record.json
+
+# Logs and temporary files
+.diagnostics/
+*.log
+.*.tmp
+
+# Editor settings
+.vscode/

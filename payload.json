@@ -1,0 +1,29 @@
+{
+    "operationName": "searchJobCardsByLocation",
+    "variables": {
+        "searchJobRequest": {
+            "locale": "en-GB",
+            "country": "United Kingdom",
+            "keyWords": "",
+            "equalFilters": [],
+            "containFilters": [
+                {
+                    "key": "isPrivateSchedule",
+                    "val": ["true", "false"]
+                }
+            ],
+            "rangeFilters": [],
+            "orFilters": [],
+            "dateFilters": [],
+            "sorters": [
+                {
+                    "fieldName": "totalPayRateMax",
+                    "ascending": "false"
+                }
+            ],
+            "pageSize": 100,
+            "consolidateSchedule": true
+        }
+    },
+    "query": "query searchJobCardsByLocation($searchJobRequest: SearchJobRequest!) {\n  searchJobCardsByLocation(searchJobRequest: $searchJobRequest) {\n    nextToken\n    jobCards {\n      jobId\n      jobUuid\n      language\n      dataSource\n      requisitionType\n      jobTitle\n      jobType\n      employmentType\n      city\n      state\n      postalCode\n      locationName\n      totalPayRateMin\n      totalPayRateMax\n      tagLine\n      bannerText\n      image\n      jobPreviewVideo\n      distance\n      featuredJob\n      bonusJob\n      bonusPay\n      scheduleCount\n      currencyCode\n      geoClusterDescription\n      surgePay\n      jobTypeL10N\n      employmentTypeL10N\n      bonusPayL10N\n      surgePayL10N\n      totalPayRateMinL10N\n      totalPayRateMaxL10N\n      distanceL10N\n      monthlyBasePayMin\n      monthlyBasePayMinL10N\n      monthlyBasePayMax\n      monthlyBasePayMaxL10N\n      jobContainerJobMetaL1\n      virtualLocation\n      poolingEnabled\n      payFrequency\n      jobLocationType\n      internalStaffingOrgId\n      agencyName\n      advertisedBasePay\n      advertisedBasePayL10N\n      advertisedPayFrequency\n      advertisedPayFrequencyL10N\n      __typename\n    }\n    __typename\n  }\n}\n"
+}
